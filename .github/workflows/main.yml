@@ -1,0 +1,31 @@
+name: Deploy GREATDELIVERY Website
+
+# Trigger workflow every time main branch is updated
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1️⃣ Checkout your repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 2️⃣ Setup GitHub Pages environment
+    - name: Setup GitHub Pages
+      uses: actions/setup-pages@v4
+
+    # 3️⃣ Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v6
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./   # Root folder contains index.html
+
+    # Optional: Show a success message
+    - name: Deployment Success
+      run: echo "GREATDELIVERY website deployed successfully!"
