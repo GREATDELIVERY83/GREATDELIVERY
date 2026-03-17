@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GREATDELIVERY | POWER FLOWER PACK</title>
+<title >GREATDELIVERY | POWER FLOWER PACK</title>
 
 <style>
 
@@ -82,23 +82,42 @@ margin-top:30px;
 }
 
 .card{
-background:#111;
-padding:20px;
-border-radius:10px;
-}
+<div class="card">
+  <img src="https://images.leafly.com/flower-images/runtz-nug-image.jpg">
+  <h3>Runtz</h3>
+  <p>Sweet • Fruity • Relaxing</p>
+  <p>$4000 JMD</p>
+  <button onclick="order('Runtz 3.5g')">Order</button>
+</div>}
 
 .card h3{
 margin-top:0;
 }
 
 .card button{
-margin-top:10px;
-background:#00ff9c;
-border:none;
-padding:10px 15px;
-border-radius:5px;
-cursor:pointer;
+.card{
+background:#111;
+padding:15px;
+border-radius:15px;
+overflow:hidden;
+transition:0.4s;
+box-shadow:0 0 20px rgba(0,255,150,0.1);
 }
+
+.card img{
+width:100%;
+border-radius:12px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 0 30px rgba(0,255,150,0.4);
+}
+
+.card:hover img{
+transform:scale(1.1);
+}}
 
 footer{
 background:black;
@@ -243,8 +262,36 @@ VIEW MENU
 </div>
 
 </section>
+<section class="section">
 
+<h2>🔥 Bundle Deals</h2>
 
+<div class="grid">
+
+<div class="card">
+<h3>Starter Pack</h3>
+<p>2x 3.5g + Delivery</p>
+<p>$5000 JMD</p>
+<button onclick="order('Starter Pack')">Order</button>
+</div>
+
+<div class="card">
+<h3>Premium Pack</h3>
+<p>California Strain + 5 Joints</p>
+<p>$7000 JMD</p>
+<button onclick="order('Premium Pack')">Order</button>
+</div>
+
+<div class="card">
+<h3>Boss Pack</h3>
+<p>2 Cali Strains + 7 Joints</p>
+<p>$12000 JMD</p>
+<button onclick="order('Boss Pack')">Order</button>
+</div>
+
+</div>
+
+</section>
 <section class="section" id="premade">
 
 <h2>Pre Made Flower Joints</h2>
@@ -268,8 +315,19 @@ VIEW MENU
 </div>
 
 </section>
+<section class="section">
 
+<h2>🔥 Latest Drops</h2>
 
+<div style="display:flex; overflow-x:auto; gap:15px;">
+
+<img src="https://images.leafly.com/flower-images/runtz-nug-image.jpg" width="200">
+<img src="https://www.stiiizy.com/cdn/shop/files/BlueRuntz1x_600x.png" width="200">
+<img src="https://www.royalqueenseeds.com/416-3839-thickbox/green-gelato.jpg" width="200">
+
+</div>
+
+</section>
 <section class="section" id="reviews">
 
 <h2>Customer Reviews</h2>
