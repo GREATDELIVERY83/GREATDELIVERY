@@ -8,6 +8,10 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00ff9c">
+
 <style>
 
 body {
@@ -110,7 +114,14 @@ nav a {
   cursor:pointer;
 }
 
-/* SCROLL SECTION */
+/* EXPLORE GLOW */
+.glow-section {
+  background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%);
+  border-radius:20px;
+  margin:40px 20px;
+  padding:60px 20px;
+}
+
 .scroll-container {
   display:flex;
   overflow-x:auto;
@@ -124,6 +135,13 @@ nav a {
   border-radius:15px;
   padding:15px;
   text-align:left;
+  box-shadow:0 0 15px rgba(255,255,255,0.08);
+  transition:0.3s;
+}
+
+.scroll-card:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 25px rgba(255,255,255,0.2);
 }
 
 /* FOOTER */
@@ -138,6 +156,24 @@ footer {
 <script>
 function order(item){
   window.location.href = "https://wa.me/18765481297?text=Order:%20" + item;
+}
+
+/* INSTALL APP */
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('installBtn').style.display = 'inline-block';
+});
+
+function installApp() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => {
+      deferredPrompt = null;
+    });
+  }
 }
 </script>
 
@@ -162,6 +198,13 @@ function order(item){
 <p>Premium Delivery Experience</p>
 <button class="order-btn" onclick="order('Menu Order')">Order Now</button>
 <button class="menu-btn" onclick="document.getElementById('menu').scrollIntoView()">View Menu</button>
+
+<br>
+
+<button onclick="installApp()" id="installBtn" style="display:none; background:white; color:black;">
+Install App
+</button>
+
 </section>
 
 <!-- MENU -->
@@ -286,7 +329,7 @@ function order(item){
 </section>
 
 <!-- EXPLORE -->
-<section id="explore" class="section">
+<section id="explore" class="section glow-section">
 <h2>🔥 Explore Vibes</h2>
 
 <div class="scroll-container">
@@ -298,7 +341,7 @@ function order(item){
 
 <div class="scroll-card">
 <h3>Gelato</h3>
-<p>Balances mood, relieves anxiety, delivers smooth calming effects.</p>
+<p>Balances mood, relieves anxiety, smooth calming effect.</p>
 </div>
 
 <div class="scroll-card">
@@ -308,7 +351,7 @@ function order(item){
 
 <div class="scroll-card">
 <h3>Pineapple Hydro</h3>
-<p>Boosts energy, improves focus, uplifting daytime use.</p>
+<p>Boosts energy, improves focus, uplifting daytime strain.</p>
 </div>
 
 <div class="scroll-card">
