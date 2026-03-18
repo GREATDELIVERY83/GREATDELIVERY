@@ -37,8 +37,8 @@ header {
 nav a {
   color:white;
   text-decoration:none;
-  margin:0 10px;
-  font-size:14px;
+  margin:0 8px;
+  font-size:13px;
 }
 
 /* HERO */
@@ -110,7 +110,7 @@ nav a {
   cursor:pointer;
 }
 
-/* INSTAGRAM SCROLL */
+/* SCROLL SECTION */
 .scroll-container {
   display:flex;
   overflow-x:auto;
@@ -119,14 +119,11 @@ nav a {
 }
 
 .scroll-card {
-  min-width:200px;
-  height:200px;
-  background:linear-gradient(135deg,#00ff9c,#000);
+  min-width:240px;
+  background:#111;
   border-radius:15px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:700;
+  padding:15px;
+  text-align:left;
 }
 
 /* FOOTER */
@@ -152,8 +149,9 @@ function order(item){
 <div class="logo">GREATDELIVERY</div>
 <nav>
 <a href="#menu">Menu</a>
+<a href="#premade">Pre Made</a>
 <a href="#bundles">Bundles</a>
-<a href="#scroll">Explore</a>
+<a href="#explore">Explore</a>
 <a href="#order">Order</a>
 </nav>
 </header>
@@ -171,56 +169,90 @@ function order(item){
 <h2>🔥 Jamaica Strains</h2>
 
 <div class="grid">
-
 <div class="card">
 <h3>Gelato</h3>
-<p>3.5g</p>
+<p>Relaxing • Euphoric • Stress Relief</p>
 <p>$2500 JMD</p>
 <button onclick="order('Gelato')">Order</button>
 </div>
 
 <div class="card">
 <h3>Birthday Cake</h3>
-<p>3.5g</p>
+<p>Calming • Sleep Aid • Mood Boost</p>
 <p>$2500 JMD</p>
 <button onclick="order('Birthday Cake')">Order</button>
 </div>
 
 <div class="card">
 <h3>Pineapple Hydro</h3>
-<p>3.5g</p>
+<p>Energetic • Focus • Uplifting</p>
 <p>$2500 JMD</p>
 <button onclick="order('Pineapple Hydro')">Order</button>
 </div>
-
 </div>
 
 <h2 style="margin-top:50px;">🔥 California Strains</h2>
 
 <div class="grid">
-
 <div class="card">
 <h3>Runtz</h3>
-<p>3.5g</p>
+<p>Happy • Relaxed • Full Body High</p>
 <p>$4000 JMD</p>
 <button onclick="order('Runtz')">Order</button>
 </div>
 
 <div class="card">
 <h3>Gelato 41</h3>
-<p>3.5g</p>
+<p>Creative • Smooth • Balanced</p>
 <p>$4000 JMD</p>
 <button onclick="order('Gelato 41')">Order</button>
 </div>
 
 <div class="card">
 <h3>Wedding Cake</h3>
-<p>3.5g</p>
+<p>Deep Relaxation • Stress Relief</p>
 <p>$4000 JMD</p>
 <button onclick="order('Wedding Cake')">Order</button>
 </div>
+</div>
+</section>
+
+<!-- PRE MADE -->
+<section id="premade" class="section">
+<h2>🔥 PRE MADE FLOWER PACK</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Pack of 5 (Straight)</h3>
+<p>$3000 JMD</p>
+<button onclick="order('Pack 5 Straight')">Order</button>
+</div>
+
+<div class="card">
+<h3>Pack of 5 (Blended)</h3>
+<p>$3500 JMD</p>
+<button onclick="order('Pack 5 Blended')">Order</button>
+</div>
+
+<div class="card">
+<h3>Pack of 7 (Straight)</h3>
+<p>$5000 JMD</p>
+<button onclick="order('Pack 7 Straight')">Order</button>
+</div>
+
+<div class="card">
+<h3>Pack of 7 (Blended)</h3>
+<p>$5500 JMD</p>
+<button onclick="order('Pack 7 Blended')">Order</button>
+</div>
 
 </div>
+
+<p style="margin-top:20px; font-size:12px; color:#aaa;">
+* Blended = Mixed with Tobacco (Grabba)
+</p>
+
 </section>
 
 <!-- BUNDLES -->
@@ -253,16 +285,37 @@ function order(item){
 </div>
 </section>
 
-<!-- INSTAGRAM STYLE SCROLL -->
-<section id="scroll" class="section">
+<!-- EXPLORE -->
+<section id="explore" class="section">
 <h2>🔥 Explore Vibes</h2>
 
 <div class="scroll-container">
-<div class="scroll-card">RUNTZ</div>
-<div class="scroll-card">GELATO</div>
-<div class="scroll-card">CAKE</div>
-<div class="scroll-card">TANGIE</div>
-<div class="scroll-card">DREAMS</div>
+
+<div class="scroll-card">
+<h3>Runtz</h3>
+<p>Promotes happiness, reduces stress, strong full-body relaxation.</p>
+</div>
+
+<div class="scroll-card">
+<h3>Gelato</h3>
+<p>Balances mood, relieves anxiety, delivers smooth calming effects.</p>
+</div>
+
+<div class="scroll-card">
+<h3>Wedding Cake</h3>
+<p>Helps with insomnia, deep relaxation, stress relief.</p>
+</div>
+
+<div class="scroll-card">
+<h3>Pineapple Hydro</h3>
+<p>Boosts energy, improves focus, uplifting daytime use.</p>
+</div>
+
+<div class="scroll-card">
+<h3>Birthday Cake</h3>
+<p>Calms nerves, helps sleep, reduces tension.</p>
+</div>
+
 </div>
 
 </section>
